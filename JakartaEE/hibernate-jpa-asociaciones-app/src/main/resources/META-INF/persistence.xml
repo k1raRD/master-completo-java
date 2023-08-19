@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+    <persistence-unit name="EjemploJPA" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.k1rard.hibernateapp.entities.Cliente</class>
+        <class>com.k1rard.hibernateapp.entities.Factura</class>
+        <class>com.k1rard.hibernateapp.entities.Direccion</class>
+        <class>com.k1rard.hibernateapp.entities.ClienteDetalle</class>
+        <class>com.k1rard.hibernateapp.entities.Curso</class>
+        <class>com.k1rard.hibernateapp.entities.Alumno</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/java_hibernate_curso?serverTimezone=UTC&amp;useTimezone=true&amp;allowPublicKeyRetrieval=true&amp;useSSL=false"/>
+            <property name="jakarta.persistence.jdbc.username" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value="Admin"/>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+        </properties>
+    </persistence-unit>
+</persistence>
